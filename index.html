@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #101113;
+      }
+
+      /* body {
+        background-color: rgb(16, 17, 19, 0.7);
+      } */
+
+      .bulb-circle {
+        width: 150px;
+        height: 150px;
+        border: 2px solid white;
+        border-radius: 50%;
+        border-top-left-radius: 25px;
+        transform: rotate(45deg);
+        /* position: absolute;
+        left: 40%;
+        top: 50%; */
+        /* margin: 0 auto; */
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+      }
+
+      .line-one {
+        transform: rotate(90deg);
+        width: 405px;
+        height: 1px;
+        border: 2px solid white;
+        margin-left: auto;
+        margin-right: auto;
+        /* margin-top: 120px; */
+      }
+
+      .line-three {
+        width: 150px;
+        height: 1px;
+        border: 2px solid white;
+        margin-top: 200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .btn-wrapper {
+        margin-top: 40px;
+      }
+
+      .btn-wrapper button {
+        display: flex;
+        margin-top: 10px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 10px;
+        border-radius: 15px;
+        border: 1px solid white;
+        background-color: black;
+        opacity: 0.6;
+        color: aliceblue;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+      }
+
+      button:hover {
+        opacity: 1;
+      }
+
+      .glow {
+        width: 150px;
+        height: 150px;
+        border: 2px solid white;
+        border-radius: 50%;
+        border-top-left-radius: 25px;
+        transform: rotate(45deg);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        box-shadow: rgba(248, 247, 247, 0.874) 15px 20px 55px,
+          rgba(254, 253, 253, 0.9) 1px -12px 30px,
+          rgba(254, 253, 253, 0.742) 1px 4px 6px,
+          rgba(250, 249, 249, 0.788) 1px 12px 13px,
+          rgba(253, 251, 251, 0.53) 1px -3px 5px;
+        background-color: whitesmoke;
+      }
+
+      #bulboff {
+        width: 150px;
+        height: 150px;
+        border: 2px solid white;
+        border-radius: 50%;
+        border-top-left-radius: 25px;
+        transform: rotate(45deg);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="line-one"></div>
+    <div class="line-three"></div>
+    <div class="bulb-circle" id="bulboff"></div>
+    <div class="btn-wrapper">
+      <button onclick="bulbOn()">Turn on the bulb</button>
+      <button onclick="bulbOff()">Turn off the bulb</button>
+    </div>
+    <script>
+      function bulbOn() {
+        let bulbCir = document.querySelector(".bulb-circle");
+        bulbCir.setAttribute("class", "glow");
+        let bodyBgClr = document.querySelector("body");
+        bodyBgClr.style.backgroundColor = "#";
+      }
+
+      function bulbOff() {
+        let myVarForBulbOff = document.querySelector("#bulboff");
+        myVarForBulbOff.setAttribute("class", "bulb-circle");
+        let bodyBgClr = document.querySelector("body");
+      }
+    </script>
+  </body>
+</html>
